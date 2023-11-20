@@ -21,11 +21,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.search}>
-        {/* <InputSearch
+        <InputSearch
           time={2000}
           ref={searchRef}
           onChange={changeSearchText}
-        /> */}
+        />
       </div>
       
       <Table>

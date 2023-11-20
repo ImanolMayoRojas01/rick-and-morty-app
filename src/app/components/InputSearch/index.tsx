@@ -1,7 +1,8 @@
+import { FaSearch } from 'react-icons/fa'
 import styles from './styles.module.scss'
 import { forwardRef } from 'react'
 import { debounce } from 'debounce'
-import { TextField } from "@mui/material"
+import clsx from 'clsx'
 
 type InputSearchProps = {
   placeholder?: string
@@ -16,13 +17,23 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
     const onChangeDebounce = debounce(onChange, time);
 
     return (
-      <TextField
-        id="outlined-basic"
-        label="Buscador"
-        variant="outlined"
-        ref={ref}
-        onChange={onChangeDebounce}
-      />
+      <div
+        className={clsx([
+          styles.container,
+          classnames || ''
+        ])}
+      >
+        <input
+          type="text"
+          placeholder={placeholder}
+          ref={ref}
+          onChange={onChangeDebounce}
+          className={styles.input}
+        />
+        <div className={styles.icon}>
+          <FaSearch size={20} />
+        </div>
+      </div>
     );
   }
 );
