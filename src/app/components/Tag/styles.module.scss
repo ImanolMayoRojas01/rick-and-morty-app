@@ -1,0 +1,19 @@
+@use "@/src/app/assets/styles/variables/colors.scss" as Colors;
+
+.container {
+  display: flex;
+  padding: 5px 20px;
+  border-radius: 15px;
+  color: Colors.$green-100;
+  width: max-content;
+  // border: 1px solid Colors.$green-100;
+  &.color-green-50 {
+    background-color: Colors.$green-50;
+    color: white;
+  }
+  &.color-red-50 {
+    background-color: Colors.$red-50;
+    color: white;
+  }
+
+}

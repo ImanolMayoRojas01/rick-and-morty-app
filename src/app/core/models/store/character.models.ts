@@ -1,9 +1,9 @@
 import { FetchStateType } from "../app/store.models"
 
-type CharacterOriginType = 'unknown' | ''
-type CharacterStatusType = 'Alive' | ''
-type CharacterSpecieType = 'Human' | ''
-type CharacterGenderType = 'Male' | 'Female'
+export type CharacterOriginType = 'unknown' | ''
+export type CharacterStatusType = 'Alive' | ''
+export type CharacterSpecieType = 'Human' | ''
+export type CharacterGenderType = 'Male' | 'Female'
 
 export type CharacterLocation = {
   name: string,
