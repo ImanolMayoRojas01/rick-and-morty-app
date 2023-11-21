@@ -32,7 +32,7 @@ export default function Home() {
       <div className={styles.cards}>
         {
           CharacterStore.characterPagination.characters.map((character, index) => (
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345 }} key={index}>
               {
                 CharacterStore.fetchStates.getCharacters !== 'loading'
                 ?
